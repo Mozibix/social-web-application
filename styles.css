@@ -779,7 +779,7 @@ div.right div.friend-request {
 
 @media screen and (max-width: 992px) {
   .container {
-    width: 100%;
+    width: 90%;
   }
 
   nav .search-bar {
@@ -868,14 +868,14 @@ div.right div.friend-request {
     transform: rotate(-90deg);
   }
 
-    .left .notification-popup {
-    display: grid;
+  .left .notification-popup {
+    display: none;
+    z-index: -100;
   }
 
   .left .notification-popup::before {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 380px) {
