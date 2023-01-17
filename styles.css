@@ -778,7 +778,7 @@ div.right div.friend-request {
 
 @media screen and (max-width: 992px) {
   .container {
-    width: 100vw;
+    width: 100%;
   }
 
   nav .search-bar {
@@ -810,6 +810,11 @@ div.right div.friend-request {
     grid-column: 1/3;
   }
 
+  .middle .create-post {
+    width: 85%;
+    margin-left: 5rem;
+  }
+
   main .container .right {
     display: none;
   }
@@ -837,6 +842,7 @@ div.right div.friend-request {
   .customize-theme .choose-bg span {
     display: none;
   }
+
   main .container .left {
     width: 4rem;
     left: 12.5rem;
@@ -874,6 +880,10 @@ div.right div.friend-request {
 
   .left .notification-popup::before {
     display: none;
+  }
+
+  .middle .create-post {
+    margin: 0;
   }
 }
 
