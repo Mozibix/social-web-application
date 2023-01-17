@@ -16,6 +16,15 @@ const messageSearch = messageBox.querySelector("#message-search");
 
 const themeMenu = document.querySelector("#theme-menu");
 const themeModal = document.querySelector(".customize-theme");
+//FONTS
+const fontSizes = document.querySelectorAll(".choose-size span");
+var root = document.querySelector(":root");
+// COLORS
+const colorPalette = document.querySelectorAll(".choose-color span");
+// BG-COLORS
+const bgColor1 = document.querySelector(".bg-1");
+const bgColor2 = document.querySelector(".bg-2");
+const bgColor3 = document.querySelector(".bg-3");
 
 // SIDE-BAR FUNCTIONS
 const changeActiveClass = () => {
@@ -28,6 +37,11 @@ menu.forEach((props) => {
   props.addEventListener("click", () => {
     changeActiveClass();
     props.classList.add("active");
+    if (props.id != "theme-menu") {
+      themeModal.style.display = "none";
+    } else {
+      themeModal.style.display = "block";
+    }
     if (props.id != "notifications") {
       document.querySelector(".notification-popup").style.display = "none";
     } else {
@@ -90,3 +104,137 @@ const closeModal = (e) => {
 };
 
 themeModal.addEventListener("click", closeModal);
+
+// FONTS FUNCTIONS
+// REMOVING ACTIVE CLASS FROM SPANS OR SELECTORS
+const removeActive = () => {
+  fontSizes.forEach((size) => {
+    size.classList.remove("active");
+  });
+};
+fontSizes.forEach((size) => {
+  size.addEventListener("click", (e) => {
+    removeActive();
+    let fontSize;
+    size.classList.toggle("active");
+    if (size.classList.contains("font-size-1")) {
+      fontSize = "10px";
+      root.style.setProperty("--sticky-top-left", "5.4rem");
+      root.style.setProperty("--sticky-top-right", "5.4rem");
+    } else if (size.classList.contains("font-size-2")) {
+      fontSize = "13px";
+      root.style.setProperty("--sticky-top-left", "5.4rem");
+      root.style.setProperty("--sticky-top-right", "-7rem");
+    } else if (size.classList.contains("font-size-3")) {
+      fontSize = "16px";
+      root.style.setProperty("--sticky-top-left", "-2rem");
+      root.style.setProperty("--sticky-top-right", "4rem");
+    } else if (size.classList.contains("font-size-4")) {
+      fontSize = "19px";
+      root.style.setProperty("--sticky-top-left", "4rem");
+      root.style.setProperty("--sticky-top-right", "5rem");
+    } else if (size.classList.contains("font-size-5")) {
+      fontSize = "21px";
+      root.style.setProperty("--sticky-top-left", "-12rem");
+      root.style.setProperty("--sticky-top-right", "-40rem");
+    }
+    // CHANGE FONT SIZE OF THE ROOT HTML ELEMENT
+    document.querySelector("html").style.fontSize = fontSize;
+  });
+});
+
+//COLOR CHANGE FUNCTIONS
+const changeActiveColor = () => {
+  colorPalette.forEach((colorSelector) => {
+    colorSelector.classList.remove("active");
+  });
+};
+//CHANGE PRIMARY COLORS
+colorPalette.forEach((color) => {
+  color.addEventListener("click", () => {
+    changeActiveColor();
+    let primaryHue;
+    let primarySaturation;
+    let primaryLight;
+
+    if (color.classList.contains("color-1")) {
+      primaryHue = 252;
+      primarySaturation = "75%";
+      primaryLight = "60%";
+    } else if (color.classList.contains("color-2")) {
+      primaryHue = 52;
+      primarySaturation = "75%";
+      primaryLight = "60%";
+    } else if (color.classList.contains("color-3")) {
+      primaryHue = 352;
+      primarySaturation = "95%";
+      primaryLight = "65%";
+    } else if (color.classList.contains("color-4")) {
+      primaryHue = 152;
+      primarySaturation = "75%";
+      primaryLight = "60%";
+    } else if (color.classList.contains("color-5")) {
+      primaryHue = 202;
+      primarySaturation = "75%";
+      primaryLight = "60%";
+    }
+
+    color.classList.add("active");
+
+    root.style.setProperty("--primary-hue", primaryHue);
+    root.style.setProperty("--primary-saturation", primarySaturation);
+    root.style.setProperty("--primary-light", primaryLight);
+  });
+});
+
+//BACKGROUND VALUES
+let lightColor;
+let whiteColor;
+let darkColor;
+
+//CHANGE BAGCKGROUND FUNCTION
+const changeBg = () => {
+  root.style.setProperty("--light-main", lightColor);
+  root.style.setProperty("--white-main", whiteColor);
+  root.style.setProperty("--dark-main", darkColor);
+};
+
+//CHANGE BG-COLOR
+bgColor1.addEventListener("click", () => {
+  lightColor = "95%";
+  whiteColor = "100%";
+  darkColor = "17%";
+
+  //ADDING ACTIVE CLASS
+  bgColor1.classList.add("active");
+  //REMOVING ACTIVE CLASS FROM OTHER SPAN ELEMENT
+  bgColor2.classList.remove("active");
+  bgColor3.classList.remove("active");
+  changeBg();
+});
+
+bgColor2.addEventListener("click", () => {
+  lightColor = "15%";
+  whiteColor = "20%";
+  darkColor = "95%";
+
+  //ADDING ACTIVE CLASS
+  bgColor2.classList.add("active");
+  //REMOVING ACTIVE CLASS FROM OTHER SPAN ELEMENT
+  bgColor1.classList.remove("active");
+  bgColor3.classList.remove("active");
+  changeBg();
+});
+
+bgColor3.addEventListener("click", () => {
+  lightColor = "0%";
+  whiteColor = "10%";
+  darkColor = "95%";
+
+  //ADDING ACTIVE CLASS
+  bgColor3.classList.add("active");
+  //REMOVING ACTIVE CLASS FROM OTHER SPAN ELEMENT
+  bgColor1.classList.remove("active");
+  bgColor2.classList.remove("active");
+  changeBg();
+});

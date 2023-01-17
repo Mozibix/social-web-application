@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="./images/user-tie.png" />
     <title>Chat Application</title>
   </head>
   <body id="body">
@@ -14,6 +22,8 @@
       <div class="container">
         <h2 class="logo">Dark App</h2>
         <div class="search-bar">
+          <span><i class="fa fa-search" aria-hidden="true"></i> </span>
+
           <input
             type="search"
             placeholder="Search for creators, inspiration,  and projects"
@@ -22,7 +32,7 @@
         <div class="create">
           <label class="btn btn-primary" for="create-post">create</label>
           <div class="profile-picture">
-            <img src="./images/profile-1.jpg" alt="profile" />
+            <img src="./images/profile-1.jpeg" alt="profile" />
           </div>
         </div>
       </div>
@@ -36,12 +46,12 @@
         <div class="left">
           <a href="#!" class="profile">
             <div class="profile-picture">
-              <img src="./images/profile-1.jpg" alt="profile" />
+              <img src="./images/profile-1.jpeg" alt="profile" />
             </div>
 
             <div class="handle">
               <h4>Dark_9T</h4>
-              <p class="namemuted">@dark_9t</p>
+              <p class="text-muted">@dark_9t</p>
             </div>
           </a>
 
@@ -49,15 +59,18 @@
 
           <div class="sidebar">
             <a href="#body" class="active menu-item">
-              <span>icn</span>
+              <span><i class="fa fa-home" aria-hidden="true"></i> </span>
               <h3>home</h3>
             </a>
             <a href="#!" class="menu-item">
-              <span>icn</span>
+              <span><i class="fa fa-compass" aria-hidden="true"></i> </span>
               <h3>explore</h3>
             </a>
             <a href="#!" class="menu-item" id="notifications">
-              <span>icn <small class="notification-count">10+</small></span>
+              <span
+                ><i class="fa fa-bell" aria-hidden="true"></i>
+                <small class="notification-count">10+</small></span
+              >
               <h3>notifications</h3>
 
               <!-- POP-UP NOTIFICATIONS -->
@@ -114,42 +127,37 @@
                     <small class="text-muted">2 days ago</small>
                   </div>
                 </div>
-                <div>
-                  <div class="profile-picture">
-                    <img src="./images/profile-7.jpg" alt="profile" />
-                  </div>
-
-                  <div class="notification-body">
-                    <b>shark bot</b> commented on your post <br />
-                    <small class="text-muted">30 minutes ago</small>
-                  </div>
-                </div>
               </div>
             </a>
             <a href="#body" class="menu-item" id="message-notification">
-              <span>icn <small class="notification-count">9</small></span>
+              <span
+                ><i class="fa fa-envelope" aria-hidden="true"></i>
+                <small class="notification-count">4</small></span
+              >
               <h3>message</h3>
             </a>
             <a href="#!" class="menu-item">
-              <span>icn</span>
+              <span><i class="fa fa-bookmark" aria-hidden="true"></i> </span>
               <h3>bookmarks</h3>
             </a>
             <a href="#!" class="menu-item">
-              <span>icn</span>
+              <span><i class="fa fa-line-chart" aria-hidden="true"></i> </span>
               <h3>analystics</h3>
             </a>
             <a href="#!" class="menu-item" id="theme-menu">
-              <span>icn</span>
+              <span> <i class="fa-solid fa-palette"></i> </span>
               <h3>theme</h3>
             </a>
             <a href="#!" class="menu-item">
-              <span>icn</span>
+              <span><i class="fa fa-wrench" aria-hidden="true"></i> </span>
               <h3>settings</h3>
             </a>
           </div>
 
           <!-- CREATE-POST  -->
-          <label for="create-post" class="btn btn-primary">create post</label>
+          <button for="create-post" class="btn left-btn btn-primary">
+            create post
+          </button>
         </div>
 
         <!-- MIDDLE -->
@@ -158,37 +166,37 @@
           <div class="stories">
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-8.jpg" alt="profile" />
+                <img src="./images/profile-1.jpeg" alt="profile" />
               </div>
               <p class="name">your story</p>
             </div>
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-12.jpg" alt="profile" />
+                <img src="./images/profile-4.jpg" alt="profile" />
               </div>
               <p class="name">Mac Blaze</p>
             </div>
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-9.jpg" alt="profile" />
+                <img src="./images/profile-5.jpg" alt="profile" />
               </div>
               <p class="name">Wizzy Bot</p>
             </div>
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-10.jpg" alt="profile" />
+                <img src="./images/profile-20.jpg" alt="profile" />
               </div>
               <p class="name">Blaze Mac</p>
             </div>
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-11.jpg" alt="profile" />
+                <img src="./images/profile-15.jpg" alt="profile" />
               </div>
               <p class="name">Cllify Dark</p>
             </div>
             <div class="story">
               <div class="profile-picture">
-                <img src="./images/profile-8.jpg" alt="profile" />
+                <img src="./images/profile-17.jpg" alt="profile" />
               </div>
               <p class="name">Vannessa Silver</p>
             </div>
@@ -198,7 +206,7 @@
 
           <form class="create-post">
             <div class="profile-picture">
-              <img src="./images/profile-1.jpg" alt="profile" />
+              <img src="./images/profile-1.jpeg" alt="profile" />
             </div>
             <input
               type="text"
@@ -226,21 +234,31 @@
                     <small>Docks, 10 MINUTES AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
-                <img src="./images/feed-1.jpg" alt="feeds" />
+                <img src="./images/feed-4.jpg" alt="feeds" />
               </div>
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
@@ -279,7 +297,9 @@
                     <small>Parade Ground, 2 HOURS AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
@@ -288,12 +308,20 @@
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
@@ -333,7 +361,9 @@
                     <small>New Industries, 9 MINUTES AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
@@ -342,21 +372,29 @@
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
               <div class="liked-by">
                 <span>
-                  <img src="./images/profile-10.jpg" alt="people" />
+                  <img src="./images/profile-20.jpg" alt="people" />
                 </span>
                 <span>
-                  <img src="./images/profile-1.jpg" alt="people" />
+                  <img src="./images/profile-1.jpeg" alt="people" />
                 </span>
                 <span>
                   <img src="./images/profile-14.jpg" alt="people" />
@@ -388,7 +426,9 @@
                     <small>Power House, 5 HOURS AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
@@ -397,12 +437,18 @@
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span><i class="fa fa-heart" aria-hidden="true"></i> </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
@@ -442,7 +488,9 @@
                     <small>Ruins, 30 SECS AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
@@ -451,12 +499,20 @@
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
@@ -495,7 +551,9 @@
                     <small>Docks, 10 MINUTES AGO</small>
                   </div>
                 </div>
-                <span>---</span>
+                <span>
+                  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </span>
               </div>
 
               <div class="photo">
@@ -504,12 +562,20 @@
 
               <div class="action-button">
                 <div class="interaction-buttons">
-                  <span>{ }</span>
-                  <span>{ }</span>
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                  </span>
+                  <span>
+                    <i class="fa fa-commenting" aria-hidden="true"></i>
+                  </span>
+                  <span
+                    ><i class="fa fa-share-alt" aria-hidden="true"></i>
+                  </span>
                 </div>
                 <div class="bookmark">
-                  <span>{ }</span>
+                  <span
+                    ><i class="fa fa-bookmark" aria-hidden="true"></i>
+                  </span>
                 </div>
               </div>
 
@@ -543,13 +609,13 @@
           <div class="messages">
             <div class="heading">
               <h4>Messages</h4>
-              <span>edit</span>
+              <span> <i class="fa-solid fa-pen-to-square"></i> </span>
             </div>
 
             <!-- SEARCH-BAR -->
 
             <div class="search-bar">
-              <span>search</span>
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
               <input
                 type="search"
                 placeholder="Search messages"
@@ -680,8 +746,8 @@
             <h6>Aa</h6>
             <div class="choose-size">
               <span class="font-size-1"></span>
-              <span class="active font-size-2"></span>
-              <span class="font-size-3"></span>
+              <span class="font-size-2"></span>
+              <span class="active font-size-3"></span>
               <span class="font-size-4"></span>
               <span class="font-size-5"></span>
             </div>
