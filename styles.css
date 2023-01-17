@@ -798,16 +798,12 @@ div.right div.friend-request {
 
   .left .notification-popup {
     position: absolute;
-    /* top: 0.5rem; */
     display: none;
-    /* left: -24.3rem; */
     width: 22rem;
   }
 
   .left .notification-popup::before {
     position: absolute;
-    /* top: 0.5rem; */
-    /* left: calc(20rem + 3.3rem); */
     display: block;
   }
 
@@ -871,6 +867,15 @@ div.right div.friend-request {
     inset: 0 -0.5rem;
     transform: rotate(-90deg);
   }
+
+    .left .notification-popup {
+    display: grid;
+  }
+
+  .left .notification-popup::before {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 380px) {
