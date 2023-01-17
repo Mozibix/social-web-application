@@ -196,7 +196,6 @@ main .container .left .profile {
 
 /* LEFT SIDE-BAR STYLES */
 .left .sidebar {
-  border: 1px solid;
   margin-top: 0.3rem;
   background-color: var(--color-white);
   border-radius: var(--card-border-radius);
@@ -779,7 +778,7 @@ div.right div.friend-request {
 
 @media screen and (max-width: 992px) {
   .container {
-    width: 90%;
+    width: 100vw;
   }
 
   nav .search-bar {
