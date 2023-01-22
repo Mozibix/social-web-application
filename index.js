@@ -31,9 +31,7 @@ const bgColor3 = document.querySelector(".bg-3");
 
 // PRELOADER FUNCTIONS
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.style.display = "none";
-  }, 1500);
+  loader.style.display = "none";
 });
 
 // SIDE-BAR FUNCTIONS
