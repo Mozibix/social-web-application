@@ -3,6 +3,9 @@
 //BODY
 const body = document.querySelector(".body");
 
+// PRELOADER
+const loader = document.querySelector("#preloader");
+
 // SIDEBAR-MENU
 const menu = document.querySelectorAll(".menu-item");
 
@@ -25,6 +28,13 @@ const colorPalette = document.querySelectorAll(".choose-color span");
 const bgColor1 = document.querySelector(".bg-1");
 const bgColor2 = document.querySelector(".bg-2");
 const bgColor3 = document.querySelector(".bg-3");
+
+// PRELOADER FUNCTIONS
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 1500);
+});
 
 // SIDE-BAR FUNCTIONS
 const changeActiveClass = () => {

@@ -59,6 +59,15 @@ body {
   overflow-x: hidden;
 }
 
+/* EXTRA PREOLOADER STYLES */
+#preloader {
+  background: #000 url(./images/infinity.gif) no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2000;
+}
+
 /* GENERAL APP STYLES */
 .container {
   width: 90%;
@@ -846,7 +855,7 @@ div.right div.friend-request {
   main .container .left {
     width: 4rem;
     left: 12.5rem;
-    top: 25rem;
+    top: 27rem;
     bottom: 0;
     flex-direction: row-reverse;
     transform: rotate(90deg);
@@ -858,7 +867,7 @@ div.right div.friend-request {
     flex-direction: column-reverse;
     border-radius: var(--border-radius);
     overflow: hidden;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0;
     padding-top: 0.5rem;
   }
 
