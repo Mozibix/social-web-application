@@ -323,7 +323,7 @@ main .container .left .profile {
   font-size: 0.7rem;
   padding: var(--card-padding);
   border-radius: var(--card-border-radius);
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .middle .stories .story::before {
@@ -853,19 +853,17 @@ div.right div.friend-request {
     display: none;
   }
 
-  main .container {
-    border: 1px solid;
-  }
+  /* ------------------------------------ERRORS NEED TO BE FIXED LATER ON --------------------------- */
   main .container .left {
     all: unset;
     width: 4rem;
     position: fixed;
     left: 12.5rem;
-    /* top: 35rem; */
     bottom: 0;
     flex-direction: row-reverse;
     transform: rotate(90deg);
     border: 1px solid red;
+    display: none;
   }
 
   .left .sidebar {
@@ -896,9 +894,16 @@ div.right div.friend-request {
   .left .notification-popup::before {
     display: none;
   }
+  .middle .stories {
+    width: 88%;
+  }
 
   .middle .create-post {
     margin: 0;
+  }
+
+  .middle .feeds .feed {
+    width: 75%;
   }
 }
 
@@ -910,6 +915,17 @@ div.right div.friend-request {
   main .container .left {
     border: 1px solid yellow;
   }
+  .middle .feeds .feed {
+    width: 65%;
+  }
+
+  .middle .stories {
+    width: 80%;
+  }
+
+  .middle .create-post {
+    width: 75%;
+  }
 }
 @media screen and (max-width: 325px) {
   main .container .left {
@@ -918,5 +934,12 @@ div.right div.friend-request {
 
   main .container .left {
     border: 1px solid green;
+  }
+
+  .middle .create-post {
+    width: 60%;
+  }
+  .middle .feeds .feed {
+    width: 55%;
   }
 }
