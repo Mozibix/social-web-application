@@ -852,15 +852,18 @@ div.right div.friend-request {
     display: none;
   }
 
+  main .container {
+    border: 1px solid;
+  }
   main .container .left {
+    all: unset;
     width: 4rem;
+    position: fixed;
     left: 12.5rem;
-    top: 27rem;
+    /* top: 35rem; */
     bottom: 0;
     flex-direction: row-reverse;
     transform: rotate(90deg);
-    position: fixed;
-    overflow: hidden;
     border: 1px solid red;
   }
 
@@ -912,8 +915,7 @@ div.right div.friend-request {
     top: 37.5rem;
   }
 
-    main .container .left {
+  main .container .left {
     border: 1px solid green;
   }
-
 }
