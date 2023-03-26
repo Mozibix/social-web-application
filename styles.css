@@ -391,13 +391,22 @@ main .container .left .profile {
 }
 
 /* FEEDS STYLES */
+.middle .feeds {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .middle .feeds .feed {
   background: var(--color-white);
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
-  margin: 1rem;
+  margin: 1rem auto;
+  border: 1px solid var(--color-primary);
   font-size: 0.8rem;
   line-height: 1.5;
+  width: 80%;
+  aspect-ratio: 1/1;
 }
 
 .middle .feed .head {
@@ -414,12 +423,17 @@ main .container .left .profile {
 }
 
 .middle .feed .photo {
-  border-radius: var(--card-border-radius);
   overflow: hidden;
-  margin: 0.7rem 0;
-  cursor: pointer;
+  margin: 0.7rem auto;
+  width: 90%;
+  aspect-ratio: 1/1;
+  display: grid;
+  justify-content: center;
+  border-radius: var(--card-border-radius);
+  align-items: center;
 }
 .middle .feed .photo > img {
+  border-radius: var(--card-border-radius);
   width: 100%;
   aspect-ratio: 1/1;
 }
