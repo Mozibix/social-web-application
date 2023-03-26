@@ -25,6 +25,7 @@ nav .create > label {
   }
 }
 
+/* LEFT SECTION */
 .left_main {
   width: 100%;
 }
@@ -45,6 +46,22 @@ nav .create > label {
     position: relative;
     inset: 0 -0.1rem;
     display: block;
+  }
+}
+
+/* RIGHT SECTION */
+.right_main {
+  width: 100%;
+}
+.right_main .right {
+  position: fixed !important;
+  margin-top: 4.5rem;
+  width: 26%;
+}
+@media screen and (min-width: 1200px) {
+  .right_main .right {
+    margin-top: 5.5rem;
+    width: 22%;
   }
 }
 
@@ -82,6 +99,7 @@ nav .create > label {
 
 /* MIDDLE SECTION */
 .middle {
+  padding-bottom: 5rem;
   /* CREATE POST STYLES */
 }
 @media screen and (min-width: 580px) {
