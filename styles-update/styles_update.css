@@ -25,6 +25,35 @@ nav .create > label {
   }
 }
 
+.error_page_sec {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2000;
+  background: #000;
+  color: white;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.error_page_sec h2 {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.error_page_sec .quotes {
+  font-weight: 600;
+  font-size: 1.5;
+}
+@media screen and (min-width: 993px) {
+  .error_page_sec {
+    display: none;
+  }
+}
+
 /* LEFT SECTION */
 .left_main {
   width: 100%;
