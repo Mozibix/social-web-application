@@ -420,7 +420,8 @@ main .container .left .profile {
   cursor: pointer;
 }
 .middle .feed .photo > img {
-  height: 19rem;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 .middle .feed .action-button {
   display: flex;
