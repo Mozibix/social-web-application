@@ -28,6 +28,19 @@ nav {
   }
 }
 
+.left_main {
+  width: 100%;
+  .left {
+    position: fixed !important;
+    margin-top: 4.5rem;
+    @media screen and (min-width: 1200px) {
+      margin-top: 5.5rem;
+      padding: 0.5rem;
+      width: 16%;
+    }
+  }
+}
+
 .left .sidebar {
   @media screen and (min-width: 768px) {
     position: relative;
@@ -67,7 +80,6 @@ div {
 
 /* MIDDLE SECTION */
 .middle {
-  padding-bottom: 5rem;
   .stories {
     @media screen and (min-width: 580px) {
       width: inherit;

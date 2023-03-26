@@ -117,10 +117,9 @@ img {
 .text-muted {
   color: var(--color-gray);
   cursor: pointer;
-
-  /*------------------------------------------------------- ERRORS NEED FROM THE WIDTH TO BE FIXED LATER ----------------------------------------------------------------------------- */
-  /* width: auto; */
 }
+
+/*------------------------------------------------------- ERRORS NEED FROM THE WIDTH TO BE FIXED LATER ----------------------------------------------------------------------------- */
 
 /* NAVBAR STYLES */
 
@@ -197,7 +196,7 @@ main .container .left .profile {
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  width: 88%;
+  min-width: 10rem;
   padding: var(--card-padding);
   background-color: var(--color-white);
   border-radius: var(--card-border-radius);
