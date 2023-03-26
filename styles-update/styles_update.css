@@ -25,11 +25,43 @@ nav .create > label {
   }
 }
 
+/* LEFT SECTION */
+.left_main {
+  width: 100%;
+}
+.left_main .left {
+  position: fixed !important;
+  margin-top: 4.5rem;
+}
+@media screen and (min-width: 1200px) {
+  .left_main .left {
+    margin-top: 5.5rem;
+    padding: 0.5rem;
+    width: 16%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .left .sidebar {
     position: relative;
     inset: 0 -0.1rem;
     display: block;
+  }
+}
+
+/* RIGHT SECTION */
+.right_main {
+  width: 100%;
+}
+.right_main .right {
+  position: fixed !important;
+  margin-top: 4.5rem;
+  width: 26%;
+}
+@media screen and (min-width: 1200px) {
+  .right_main .right {
+    margin-top: 5.5rem;
+    width: 22%;
   }
 }
 
@@ -60,7 +92,8 @@ nav .create > label {
     margin: 0 1rem;
     grid-template-columns: 16vw 47% 22vw;
     margin: inherit;
-    gap: 6rem;
+    gap: 4.5rem;
+    overflow-x: hidden;
   }
 }
 
