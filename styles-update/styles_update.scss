@@ -14,9 +14,76 @@ nav {
     & > label {
       display: none;
 
-      @media screen and (min-width: 380px) {
+      @media screen and (min-width: 650px) {
         display: block;
       }
+    }
+  }
+}
+
+.left .sidebar {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+/* MAIN SECTION */
+main {
+  @media screen and (min-width: 1200px) {
+    padding-top: 0.5rem;
+  }
+}
+
+div {
+  &.container {
+    @media screen and (min-width: 1200px) {
+      margin: 0 0 0 -2rem;
+      padding: 0.5rem 3rem;
+      grid-template-columns: 16vw 60% 22vw;
+      gap: 1rem;
+      width: 93%;
+    }
+    @media screen and (min-width: 1400px) {
+      grid-template-columns: 16vw 55% 22vw;
+      margin: inherit;
+      gap: 2rem;
+    }
+  }
+}
+
+/* MIDDLE SECTION */
+.middle {
+  @media screen and (min-width: 1400px) {
+  }
+  .stories {
+    @media screen and (min-width: 580px) {
+      width: inherit;
+    }
+    @media screen and (min-width: 768px) {
+      gap: 0.5rem;
+    }
+    @media screen and (min-width: 993px) {
+      width: 38rem;
+    }
+    @media screen and (min-width: 1020px) {
+      min-width: 40rem;
+    }
+    @media screen and (min-width: 1040px) {
+      width: 41rem;
+    }
+    @media screen and (min-width: 1060px) {
+      width: 42rem;
+    }
+    @media screen and (min-width: 1090px) {
+      width: 43rem;
+    }
+    @media screen and (min-width: 1140px) {
+      width: 45rem;
+    }
+    @media screen and (min-width: 1180px) and (max-width: 1200px) {
+      width: 47rem;
+    }
+    @media screen and (min-width: 1201px) {
+      width: unset;
     }
   }
 }
@@ -33,6 +100,9 @@ MEDIA SCREENS
     
 }
 
+    @media screen and (min-width: 768pX) {
+
+    }
     @media screen and (min-width: 650px) {
     
 }
