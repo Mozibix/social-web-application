@@ -1,3 +1,10 @@
+nav,
+main {
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+}
+
 nav {
   .container {
     width: 90%;
@@ -23,6 +30,8 @@ nav {
 
 .left .sidebar {
   @media screen and (min-width: 768px) {
+    position: relative;
+    inset: 0 -0.1rem;
     display: block;
   }
 }
@@ -35,6 +44,10 @@ main {
 
 div {
   &.container {
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 8vw 60% 27vw;
+      gap: 0.5rem;
+    }
     @media screen and (min-width: 1200px) {
       margin: 0 0 0 -2rem;
       padding: 0.5rem 3rem;
@@ -43,17 +56,16 @@ div {
       width: 93%;
     }
     @media screen and (min-width: 1400px) {
-      grid-template-columns: 16vw 55% 22vw;
+      margin: 0 1rem;
+      grid-template-columns: 16vw 47% 22vw;
       margin: inherit;
-      gap: 2rem;
+      gap: 6rem;
     }
   }
 }
 
 /* MIDDLE SECTION */
 .middle {
-  @media screen and (min-width: 1400px) {
-  }
   .stories {
     @media screen and (min-width: 580px) {
       width: inherit;
@@ -61,29 +73,55 @@ div {
     @media screen and (min-width: 768px) {
       gap: 0.5rem;
     }
-    @media screen and (min-width: 993px) {
-      width: 38rem;
+    @media screen and (min-width: 992px) {
+      width: inherit;
     }
-    @media screen and (min-width: 1020px) {
-      min-width: 40rem;
-    }
-    @media screen and (min-width: 1040px) {
-      width: 41rem;
-    }
-    @media screen and (min-width: 1060px) {
-      width: 42rem;
-    }
-    @media screen and (min-width: 1090px) {
-      width: 43rem;
-    }
-    @media screen and (min-width: 1140px) {
-      width: 45rem;
-    }
-    @media screen and (min-width: 1180px) and (max-width: 1200px) {
-      width: 47rem;
-    }
-    @media screen and (min-width: 1201px) {
-      width: unset;
+  }
+
+  /* CREATE POST STYLES */
+  /* 
+
+
+.middle .create-post {
+  width: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"] {
+  width: 100%;
+  justify-self: start;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 3rem;
+}
+*/
+  .create_post_container {
+    width: 100%;
+    .create-post {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      background: var(--color-white);
+      padding: 0.4rem var(--card-padding);
+      border-radius: var(--border-radius);
+      justify-content: space-between;
+      input[type="text"] {
+        width: 100%;
+        justify-self: start;
+        padding-left: 1rem;
+        background: transparent;
+        color: var(--color-dark);
+        margin-right: 3rem;
+      }
     }
   }
 }

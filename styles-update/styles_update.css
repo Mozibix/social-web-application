@@ -1,3 +1,10 @@
+@media screen and (max-width: 992px) {
+  nav,
+  main {
+    display: none;
+  }
+}
+
 nav .container {
   width: 90%;
 }
@@ -20,6 +27,8 @@ nav .create > label {
 
 @media screen and (min-width: 768px) {
   .left .sidebar {
+    position: relative;
+    inset: 0 -0.1rem;
     display: block;
   }
 }
@@ -31,6 +40,12 @@ nav .create > label {
   }
 }
 
+@media screen and (min-width: 992px) {
+  div.container {
+    grid-template-columns: 8vw 60% 27vw;
+    gap: 0.5rem;
+  }
+}
 @media screen and (min-width: 1200px) {
   div.container {
     margin: 0 0 0 -2rem;
@@ -42,13 +57,40 @@ nav .create > label {
 }
 @media screen and (min-width: 1400px) {
   div.container {
-    grid-template-columns: 16vw 55% 22vw;
+    margin: 0 1rem;
+    grid-template-columns: 16vw 47% 22vw;
     margin: inherit;
-    gap: 2rem;
+    gap: 6rem;
   }
 }
 
 /* MIDDLE SECTION */
+.middle {
+  /* CREATE POST STYLES */
+  /* 
+
+
+  .middle .create-post {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background: var(--color-white);
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+  }
+
+  .middle .create-post input[type="text"] {
+    width: 100%;
+    justify-self: start;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 3rem;
+  }
+  */
+}
 @media screen and (min-width: 580px) {
   .middle .stories {
     width: inherit;
@@ -59,45 +101,32 @@ nav .create > label {
     gap: 0.5rem;
   }
 }
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 992px) {
   .middle .stories {
-    width: 38rem;
+    width: inherit;
   }
 }
-@media screen and (min-width: 1020px) {
-  .middle .stories {
-    min-width: 40rem;
-  }
+.middle .create_post_container {
+  width: 100%;
 }
-@media screen and (min-width: 1040px) {
-  .middle .stories {
-    width: 41rem;
-  }
+.middle .create_post_container .create-post {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+  justify-content: space-between;
 }
-@media screen and (min-width: 1060px) {
-  .middle .stories {
-    width: 42rem;
-  }
-}
-@media screen and (min-width: 1090px) {
-  .middle .stories {
-    width: 43rem;
-  }
-}
-@media screen and (min-width: 1140px) {
-  .middle .stories {
-    width: 45rem;
-  }
-}
-@media screen and (min-width: 1180px) and (max-width: 1200px) {
-  .middle .stories {
-    width: 47rem;
-  }
-}
-@media screen and (min-width: 1201px) {
-  .middle .stories {
-    width: unset;
-  }
+.middle .create_post_container .create-post input[type=text] {
+  width: 100%;
+  justify-self: start;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 3rem;
 }
 
 /* 

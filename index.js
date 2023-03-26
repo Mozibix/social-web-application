@@ -142,8 +142,8 @@ fontSizes.forEach((size) => {
       root.style.setProperty("--sticky-top-left", "4rem");
       root.style.setProperty("--sticky-top-right", "5rem");
     } else if (size.classList.contains("font-size-5")) {
-      fontSize = "21px";
-      root.style.setProperty("--sticky-top-left", "-12rem");
+      fontSize = "20px";
+      root.style.setProperty("--sticky-top-left", "-40rem");
       root.style.setProperty("--sticky-top-right", "-40rem");
     }
     // CHANGE FONT SIZE OF THE ROOT HTML ELEMENT
