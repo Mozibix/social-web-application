@@ -60,7 +60,8 @@ nav .create > label {
     margin: 0 1rem;
     grid-template-columns: 16vw 47% 22vw;
     margin: inherit;
-    gap: 6rem;
+    gap: 4.5rem;
+    overflow-x: hidden;
   }
 }
 
