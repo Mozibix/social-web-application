@@ -791,10 +791,6 @@ div.right div.friend-request {
     width: 100%;
   }
 
-  nav .search-bar {
-    display: none;
-  }
-
   main .container {
     grid-template-columns: 0 auto 0rem;
     gap: 0;

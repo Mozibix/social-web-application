@@ -1,0 +1,52 @@
+nav {
+  .container {
+    width: 90%;
+  }
+
+  .search-bar {
+    display: none;
+    @media screen and (min-width: 650px) {
+      display: block;
+    }
+  }
+
+  .create {
+    & > label {
+      display: none;
+
+      @media screen and (min-width: 380px) {
+        display: block;
+      }
+    }
+  }
+}
+
+/* 
+MEDIA SCREENS 
+
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 992px) {
+    
+}
+
+    @media screen and (min-width: 650px) {
+    
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 380px) {
+    
+}
+
+@media screen and (max-width: 325px) {
+    
+}
+
+*/
