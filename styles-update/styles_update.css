@@ -66,6 +66,7 @@ nav .create > label {
 
 /* MIDDLE SECTION */
 .middle {
+  padding-bottom: 5rem;
   /* CREATE POST STYLES */
 }
 @media screen and (min-width: 580px) {
