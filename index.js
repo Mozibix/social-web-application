@@ -127,20 +127,20 @@ fontSizes.forEach((size) => {
     size.classList.toggle("active");
     if (size.classList.contains("font-size-1")) {
       fontSize = "10px";
-      root.style.setProperty("--sticky-top-left", "5.4rem");
-      root.style.setProperty("--sticky-top-right", "5.4rem");
+      root.style.setProperty("--sticky-top-left", "1rem");
+      root.style.setProperty("--sticky-top-right", "1rem");
     } else if (size.classList.contains("font-size-2")) {
       fontSize = "13px";
-      root.style.setProperty("--sticky-top-left", "5.4rem");
-      root.style.setProperty("--sticky-top-right", "-7rem");
+      root.style.setProperty("--sticky-top-left", ".5rem");
+      root.style.setProperty("--sticky-top-right", "0.5rem");
     } else if (size.classList.contains("font-size-3")) {
       fontSize = "16px";
-      root.style.setProperty("--sticky-top-left", "-2rem");
-      root.style.setProperty("--sticky-top-right", "4rem");
+      root.style.setProperty("--sticky-top-left", "0rem");
+      root.style.setProperty("--sticky-top-right", "inherit");
     } else if (size.classList.contains("font-size-4")) {
-      fontSize = "19px";
-      root.style.setProperty("--sticky-top-left", "4rem");
-      root.style.setProperty("--sticky-top-right", "5rem");
+      fontSize = "18px";
+      root.style.setProperty("--sticky-top-left", "inherit");
+      root.style.setProperty("--sticky-top-right", "inherit");
     } else if (size.classList.contains("font-size-5")) {
       fontSize = "20px";
       root.style.setProperty("--sticky-top-left", "-40rem");
