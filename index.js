@@ -22,6 +22,7 @@ const feed = document.querySelectorAll(".feed");
 // SUCCESSFUL ALERT
 const alertSuccess = document.querySelector(".alert_successful");
 const alertFail = document.querySelector(".alert_fail");
+const alertLiked = document.querySelector(".alert_liked");
 
 //MESSAGE-MENU-SECTION
 const messageMenu = document.querySelector("#message-notification");
@@ -31,6 +32,9 @@ const messageSearch = messageBox.querySelector("#message-search");
 const requests = document.querySelector("#requests");
 const friendReqBox = document.querySelector(".friend-request");
 const categoryHeader = document.querySelectorAll(".category h6");
+
+// LIKE-BTN
+const thumbsUp = document.querySelectorAll(".fa-thumbs-up");
 
 // ACTION BTNS
 const acceptAction = document.querySelector("#accept_action");
@@ -64,10 +68,18 @@ const alertSuccessful = () => {
   searchInput.value = "";
   postInput.value = "";
 };
+
 const alertFailed = () => {
   alertFail.style.top = "2rem";
   setTimeout(() => {
     alertFail.style.top = "-2rem";
+  }, 2000);
+};
+
+const alertLikedMessage = () => {
+  alertLiked.style.top = "2rem";
+  setTimeout(() => {
+    alertLiked.style.top = "-2rem";
   }, 2000);
 };
 
@@ -76,6 +88,13 @@ const createPost = () => {
     ? alertSuccessful()
     : alertFailed();
 };
+
+// LIKE-BTNS FUNCTIONS
+thumbsUp.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    alertLikedMessage();
+  });
+});
 
 // SIDE-BAR FUNCTIONS
 const changeActiveClass = () => {
