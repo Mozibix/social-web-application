@@ -160,11 +160,21 @@ const searchValue = () => {
 };
 
 // CATEGORY FUNCTIONS
-/* requests.onclick = () => {
-  console.log("hello");
-}; */
+requests.onclick = () => {
+  requests.innerHTML = "Request";
+  requests.style.color = "var(--color-dark)";
+
+  setTimeout(() => {
+    requests.innerHTML = "Request(7)";
+    requests.style.color = "var(--color-primary)";
+  }, 8000);
+};
 const addReq = () => {
   friendReqBox.classList.add("shw_req");
+
+  setTimeout(() => {
+    removeReq();
+  }, 8000);
 };
 
 const removeReq = () => {
