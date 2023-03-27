@@ -28,6 +28,9 @@ const messageMenu = document.querySelector("#message-notification");
 const messageBox = document.querySelector(".messages");
 const message = messageBox.querySelectorAll(".message");
 const messageSearch = messageBox.querySelector("#message-search");
+const requests = document.querySelector("#requests");
+const friendReqBox = document.querySelector(".friend-request");
+const categoryHeader = document.querySelectorAll(".category h6");
 
 // ACTION BTNS
 const acceptAction = document.querySelector("#accept_action");
@@ -106,6 +109,7 @@ menu.forEach((props) => {
 /* SEARCH BARS FUNCTIONS */
 
 //MESSAGES FUNCTIONS
+
 //SEARCH-BAR VALUES FUNCTION
 const searchValue = () => {
   const value = messageSearch.value.toLowerCase();
@@ -118,6 +122,34 @@ const searchValue = () => {
     }
   });
 };
+
+// CATEGORY FUNCTIONS
+/* requests.onclick = () => {
+  console.log("hello");
+}; */
+const addReq = () => {
+  friendReqBox.classList.add("shw_req");
+};
+
+const removeReq = () => {
+  friendReqBox.classList.remove("shw_req");
+};
+
+const headerRemoveActive = () => {
+  categoryHeader.forEach((header) => {
+    header.classList.remove("active");
+  });
+};
+
+categoryHeader.forEach((header) => {
+  header.addEventListener("click", () => {
+    headerRemoveActive();
+    header.classList.add("active");
+    {
+      header.classList.contains("message-requests") ? addReq() : removeReq();
+    }
+  });
+});
 
 // SEARCH CHATS
 messageSearch.addEventListener("keyup", searchValue);
