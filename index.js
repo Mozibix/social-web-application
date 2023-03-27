@@ -9,6 +9,13 @@ const loader = document.querySelector("#preloader");
 // SIDEBAR-MENU
 const menu = document.querySelectorAll(".menu-item");
 
+/*---------------------------------------------- SEARCH BAR NAV -----------------------------------*/
+const searchIcon = document.querySelector(".fa-search");
+const searchInput = document.querySelector("#search_nav");
+const feedInfo = document.querySelectorAll(".info");
+const feedContainer = document.querySelector(".feeds");
+const feed = document.querySelectorAll(".feed");
+
 //MESSAGE-MENU-SECTION
 const messageMenu = document.querySelector("#message-notification");
 const messageBox = document.querySelector(".messages");
@@ -63,6 +70,20 @@ menu.forEach((props) => {
   });
 });
 
+/* SEARCH BARS FUNCTIONS */
+
+const searchChat = () => {
+  const inputValue = searchInput.value.toLowerCase();
+  message.forEach((props) => {
+    let name = props.querySelector("h5").textContent.toLowerCase();
+    if (name.indexOf(inputValue) != -1) {
+      props.style.display = "flex";
+    } else {
+      props.style.display = "none";
+    }
+  });
+};
+
 //MESSAGES FUNCTIONS
 //SEARCH-BAR VALUES FUNCTION
 const searchValue = () => {
@@ -79,6 +100,7 @@ const searchValue = () => {
 
 // SEARCH CHATS
 messageSearch.addEventListener("keyup", searchValue);
+searchInput.addEventListener("keyup", searchChat);
 
 //HIGHLIGHT FUNCTIONS AND NOTIFICATION COUNT FUNCTIONS
 messageMenu.addEventListener("click", () => {
