@@ -27,7 +27,7 @@ nav {
     }
   }
 }
-
+/* ---------------------------ERROR  PAGE---------------------------*/
 .error_page_sec {
   width: 100%;
   height: 100vh;
@@ -54,6 +54,26 @@ nav {
   }
   @media screen and (min-width: 993px) {
     display: none;
+  }
+}
+
+.alert {
+  &_successful,
+  &_fail,
+  &_liked,
+  &_loved {
+    background: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 8px;
+    z-index: 1000;
+    position: fixed;
+    top: -2rem;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: all 1s ease;
   }
 }
 
@@ -153,14 +173,16 @@ div {
       background: var(--color-white);
       padding: 0.4rem var(--card-padding);
       border-radius: var(--border-radius);
+      padding-left: 1rem;
       justify-content: space-between;
       input[type="text"] {
         width: 100%;
         justify-self: start;
         padding-left: 1rem;
-        background: transparent;
+        background: white;
         color: var(--color-dark);
         margin-right: 3rem;
+        outline: none;
       }
     }
   }

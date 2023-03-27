@@ -9,11 +9,39 @@ const loader = document.querySelector("#preloader");
 // SIDEBAR-MENU
 const menu = document.querySelectorAll(".menu-item");
 
+// INPUTS
+const postInput = document.querySelector("#create-post");
+
+/*---------------------------------------------- SEARCH BAR NAV -----------------------------------*/
+const searchIcon = document.querySelector(".fa-search");
+const searchInput = document.querySelector("#search_nav");
+const feedInfo = document.querySelectorAll(".info");
+const feedContainer = document.querySelector(".feeds");
+const feed = document.querySelectorAll(".feed");
+
+// SUCCESSFUL ALERT
+const alertSuccess = document.querySelector(".alert_successful");
+const alertFail = document.querySelector(".alert_fail");
+const alertLiked = document.querySelector(".alert_liked");
+const alertLoved = document.querySelector(".alert_loved");
+
 //MESSAGE-MENU-SECTION
 const messageMenu = document.querySelector("#message-notification");
 const messageBox = document.querySelector(".messages");
 const message = messageBox.querySelectorAll(".message");
 const messageSearch = messageBox.querySelector("#message-search");
+const requests = document.querySelector("#requests");
+const friendReqBox = document.querySelector(".friend-request");
+const categoryHeader = document.querySelectorAll(".category h6");
+
+// LIKE-BTN
+const thumbsUp = document.querySelectorAll(".fa-thumbs-up");
+// LOVE-BTN
+const loveBtn = document.querySelectorAll(".fa-heart");
+
+// ACTION BTNS
+const acceptAction = document.querySelector("#accept_action");
+const declineAction = document.querySelector("#decline_action");
 
 //THEME CUSTOMIZATION
 
@@ -32,6 +60,57 @@ const bgColor3 = document.querySelector(".bg-3");
 // PRELOADER FUNCTIONS
 window.addEventListener("load", () => {
   loader.style.display = "none";
+});
+
+// ALERT FUNCTION
+const alertSuccessful = () => {
+  alertSuccess.style.top = "2rem";
+  setTimeout(() => {
+    alertSuccess.style.top = "-2rem";
+  }, 2000);
+  searchInput.value = "";
+  postInput.value = "";
+};
+
+const alertFailed = () => {
+  alertFail.style.top = "2rem";
+  setTimeout(() => {
+    alertFail.style.top = "-2rem";
+  }, 2000);
+};
+
+const alertLikedMessage = () => {
+  alertLiked.style.top = "2rem";
+  setTimeout(() => {
+    alertLiked.style.top = "-2rem";
+  }, 2000);
+};
+
+const alertLovedMessage = () => {
+  alertLoved.style.top = "2rem";
+  setTimeout(() => {
+    alertLoved.style.top = "-2rem";
+  }, 2000);
+};
+
+const createPost = () => {
+  searchInput.value !== "" || postInput.value !== ""
+    ? alertSuccessful()
+    : alertFailed();
+};
+
+// LIKE-BTNS FUNCTIONS
+thumbsUp.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    alertLikedMessage();
+  });
+});
+
+// LOVE-BTNS FUNCTIONS
+loveBtn.forEach((love) => {
+  love.addEventListener("click", () => {
+    alertLovedMessage();
+  });
 });
 
 // SIDE-BAR FUNCTIONS
@@ -63,7 +142,10 @@ menu.forEach((props) => {
   });
 });
 
+/* SEARCH BARS FUNCTIONS */
+
 //MESSAGES FUNCTIONS
+
 //SEARCH-BAR VALUES FUNCTION
 const searchValue = () => {
   const value = messageSearch.value.toLowerCase();
@@ -76,6 +158,44 @@ const searchValue = () => {
     }
   });
 };
+
+// CATEGORY FUNCTIONS
+requests.onclick = () => {
+  requests.innerHTML = "Request";
+  requests.style.color = "var(--color-dark)";
+
+  setTimeout(() => {
+    requests.innerHTML = "Request(7)";
+    requests.style.color = "var(--color-primary)";
+  }, 8000);
+};
+const addReq = () => {
+  friendReqBox.classList.add("shw_req");
+
+  setTimeout(() => {
+    removeReq();
+  }, 8000);
+};
+
+const removeReq = () => {
+  friendReqBox.classList.remove("shw_req");
+};
+
+const headerRemoveActive = () => {
+  categoryHeader.forEach((header) => {
+    header.classList.remove("active");
+  });
+};
+
+categoryHeader.forEach((header) => {
+  header.addEventListener("click", () => {
+    headerRemoveActive();
+    header.classList.add("active");
+    {
+      header.classList.contains("message-requests") ? addReq() : removeReq();
+    }
+  });
+});
 
 // SEARCH CHATS
 messageSearch.addEventListener("keyup", searchValue);
@@ -92,6 +212,18 @@ messageMenu.addEventListener("click", () => {
     messageMenu.querySelector(".notification-count").style.display = "block";
   }, 15000);
 });
+
+// ACTIONS FUNCTIONALITIES
+
+const accepted = () => {
+  acceptAction.innerHTML = "Accepted";
+  declineAction.innerHTML = "Decline";
+};
+
+const declined = () => {
+  acceptAction.innerHTML = "Accept";
+  declineAction.innerHTML = "Declined";
+};
 
 //THEME CUSTOMIZATION FUNCTIONS
 
