@@ -144,12 +144,13 @@ nav .container {
   padding: var(--search-padding);
 }
 
-.search-bar input[type="search"] {
+.search-bar input[type="text"] {
   background: transparent;
   width: 30vw;
   margin-left: 1rem;
   font-size: 0.9rem;
   color: var(--color-dark);
+  outline: none;
 }
 
 nav .search-bar input[type="search"]::placeholder {
