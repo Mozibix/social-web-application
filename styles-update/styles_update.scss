@@ -57,20 +57,23 @@ nav {
   }
 }
 
-.alert_successful,
-.alert_fail {
-  background: var(--color-primary);
-  color: var(--color-light);
-  border-radius: 8px;
-  z-index: 1000;
-  position: fixed;
-  top: -2rem;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  padding: 1rem;
-  text-transform: capitalize;
-  font-weight: 700;
-  transition: all 1s ease;
+.alert {
+  &_successful,
+  &_fail,
+  &_liked {
+    background: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 8px;
+    z-index: 1000;
+    position: fixed;
+    top: -2rem;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: all 1s ease;
+  }
 }
 
 /* LEFT SECTION */

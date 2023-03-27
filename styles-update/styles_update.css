@@ -55,8 +55,7 @@ nav .create > label {
   }
 }
 
-.alert_successful,
-.alert_fail {
+.alert_successful, .alert_fail, .alert_liked {
   background: var(--color-primary);
   color: var(--color-light);
   border-radius: 8px;
