@@ -60,7 +60,8 @@ nav {
 .alert {
   &_successful,
   &_fail,
-  &_liked {
+  &_liked,
+  &_loved {
     background: var(--color-primary);
     color: var(--color-light);
     border-radius: 8px;
