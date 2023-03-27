@@ -29,6 +29,10 @@ const messageBox = document.querySelector(".messages");
 const message = messageBox.querySelectorAll(".message");
 const messageSearch = messageBox.querySelector("#message-search");
 
+// ACTION BTNS
+const acceptAction = document.querySelector("#accept_action");
+const declineAction = document.querySelector("#decline_action");
+
 //THEME CUSTOMIZATION
 
 const themeMenu = document.querySelector("#theme-menu");
@@ -130,6 +134,18 @@ messageMenu.addEventListener("click", () => {
     messageMenu.querySelector(".notification-count").style.display = "block";
   }, 15000);
 });
+
+// ACTIONS FUNCTIONALITIES
+
+const accepted = () => {
+  acceptAction.innerHTML = "Accepted";
+  declineAction.innerHTML = "Decline";
+};
+
+const declined = () => {
+  acceptAction.innerHTML = "Accept";
+  declineAction.innerHTML = "Declined";
+};
 
 //THEME CUSTOMIZATION FUNCTIONS
 
