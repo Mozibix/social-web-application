@@ -405,7 +405,7 @@ main .container .left .profile {
   margin: 1rem auto;
   font-size: 0.8rem;
   line-height: 1.5;
-  width: 80%;
+  width: 95%;
   aspect-ratio: 1/1;
 }
 
@@ -425,7 +425,7 @@ main .container .left .profile {
 .middle .feed .photo {
   overflow: hidden;
   margin: 0.7rem auto;
-  width: 90%;
+  width: 100%;
   aspect-ratio: 1/1;
   display: grid;
   justify-content: center;
