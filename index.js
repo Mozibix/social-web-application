@@ -23,6 +23,7 @@ const feed = document.querySelectorAll(".feed");
 const alertSuccess = document.querySelector(".alert_successful");
 const alertFail = document.querySelector(".alert_fail");
 const alertLiked = document.querySelector(".alert_liked");
+const alertLoved = document.querySelector(".alert_loved");
 
 //MESSAGE-MENU-SECTION
 const messageMenu = document.querySelector("#message-notification");
@@ -35,6 +36,8 @@ const categoryHeader = document.querySelectorAll(".category h6");
 
 // LIKE-BTN
 const thumbsUp = document.querySelectorAll(".fa-thumbs-up");
+// LOVE-BTN
+const loveBtn = document.querySelectorAll(".fa-heart");
 
 // ACTION BTNS
 const acceptAction = document.querySelector("#accept_action");
@@ -83,6 +86,13 @@ const alertLikedMessage = () => {
   }, 2000);
 };
 
+const alertLovedMessage = () => {
+  alertLoved.style.top = "2rem";
+  setTimeout(() => {
+    alertLoved.style.top = "-2rem";
+  }, 2000);
+};
+
 const createPost = () => {
   searchInput.value !== "" || postInput.value !== ""
     ? alertSuccessful()
@@ -93,6 +103,13 @@ const createPost = () => {
 thumbsUp.forEach((thumb) => {
   thumb.addEventListener("click", () => {
     alertLikedMessage();
+  });
+});
+
+// LOVE-BTNS FUNCTIONS
+loveBtn.forEach((love) => {
+  love.addEventListener("click", () => {
+    alertLovedMessage();
   });
 });
 
