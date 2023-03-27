@@ -33,6 +33,13 @@
       </div>
     </div>
 
+    <div class="alert_successful">
+      <p class="succesful">created successfully</p>
+    </div>
+    <div class="alert_fail">
+      <p class="fail">Please fill the input</p>
+    </div>
+
     <!-- NAV SECTION -->
 
     <nav>
@@ -42,13 +49,15 @@
           <span><i class="fa fa-search" aria-hidden="true"></i> </span>
 
           <input
-            type="search"
+            type="text"
             id="search_nav"
             placeholder="Search for creators, inspiration, and projects"
           />
         </div>
         <div class="create">
-          <label class="btn btn-primary" for="create-post">create</label>
+          <button onclick="{createPost()}" class="btn btn-primary">
+            create
+          </button>
           <div class="profile-picture">
             <img src="./images/profile-1.jpeg" alt="profile" />
           </div>
@@ -176,7 +185,11 @@
             </div>
 
             <!-- CREATE-POST  -->
-            <button for="create-post" class="btn left-btn btn-primary">
+            <button
+              onclick="{createPost()}"
+              for="create-post"
+              class="btn left-btn btn-primary"
+            >
               create post
             </button>
           </div>
@@ -232,7 +245,7 @@
               <div class="profile-picture">
                 <img src="./images/profile-15.jpg" alt="profile" />
               </div>
-              <p class="name">Cllify Dark</p>
+              <p class="name">Clify Dark</p>
             </div>
 
             <div class="story">
@@ -244,19 +257,26 @@
           </div>
 
           <!-- STORIES-FORM -->
-          <div class="create_post_container">
-            <form class="create-post">
+          <form autocomplete="off" class="create_post_container">
+            <div class="create-post">
               <div class="profile-picture">
                 <img src="./images/profile-1.jpeg" alt="profile" />
               </div>
               <input
+                autocomplete="off"
                 type="text"
                 placeholder="what's on your mind, Dark_9T ?"
                 id="create-post"
               />
-              <input type="submit" value="Post" class="btn btn-primary" />
-            </form>
-          </div>
+              <button
+                onclick="{createPost()}"
+                type="button"
+                class="btn btn-primary"
+              >
+                Post
+              </button>
+            </div>
+          </form>
 
           <!-- FEEDS SECTION -->
 
@@ -659,7 +679,7 @@
               <div class="search-bar">
                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input
-                  type="search"
+                  type="text"
                   placeholder="Search messages"
                   id="message-search"
                 />
