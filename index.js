@@ -174,6 +174,7 @@ const addReq = () => {
 
   setTimeout(() => {
     removeReq();
+    requests.classList.remove("active");
   }, 8000);
 };
 
